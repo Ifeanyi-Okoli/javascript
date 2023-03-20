@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="mb-3">
+        <label for="ccNumber" class="form-label">Credit Card Number</label>
+        <input type="text" class="form-control" id="ccNumber" placeholder="1234 5678 9012 3456">
+    </div>
+    <div class="mb-3">
+        <input type="button" class="btn btn-primary" value="check" onclick="checkCC()">
+    </div>
+
+    <div class="mb-3">
+        <label for="ccNumber" class="form-label">Is is valid?</label>
+        <textarea disabled="true" class="form-control" id= "ccValidator" rows="3" style="font: 25px;"></textarea>
+    </div>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

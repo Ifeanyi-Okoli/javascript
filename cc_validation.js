@@ -39,13 +39,21 @@ Validation of CC
 const checkCC = ( )=>{
     const ccNumber = document.getElementById("cardNumber");
     const ccValidation = document.getElementById("ccValidator");
+    const ccBtn = document.getElementById("btn")
     let message = "";
 
-    if(credit_card(ccNumber.value))
+    if(credit_card(ccNumber.value)){
         message = "Your CC is valid!";
+        ccNumber.style = "border-color: green;";
+        ccBtn.style = "background-color: green";
+    }
         
-    else
-        message = "Your CC is invalid  :("
+    else{
+        message = "Your CC is invalid  :(";
+        ccNumber.style = "border-color: red;";
+        ccBtn.style = "background-color: red";
+    }
+        
     
         ccValidation.textContent = message;
 };

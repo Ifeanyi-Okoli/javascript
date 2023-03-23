@@ -1,71 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Credit Card Validation Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-    <style></style>
-</head>
-<body class="bg-black box-border">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+    <style>
+      #btn:hover{
+          background-color: rgb(239, 146, 7);
+          cursor: pointer;
+        }
+
+        #cardHolder:hover {
+            background-color: rgb(248, 226, 196);
+            cursor: pointer;
+          }
+
+          #cardNumber:hover{
+            background-color: rgb(237, 253, 208);
+            cursor: pointer;
+          }
+
+          #expirationDate:hover {
+            background-color: rgb(248, 226, 196);
+            cursor: pointer;
+          }
+
+          #securityCode:hover{
+            background-color: rgb(237, 253, 208);
+            cursor: pointer;
+          }
+
+          #amount:hover {
+            background-color: rgb(248, 226, 196);
+            cursor: pointer;
+          }
+
+    </style>
+  </head>
+  <body class="bg-black box-border">
     <header>
-        <nav class="bg-gray-300 h-20 w-full flex justify-center items-center">
-            <h1 class="text-2xl">Credit Card Validation</h1>
-        </nav>
-        <div>
-            <img src="./assets/cc-removebg-preview.png" alt="ccimage">
-        </div>
+      <nav
+        class="bg-gray-900 h-20 w-full flex justify-center items-center justify-between"
+      >
+        <span class="ml-10 sm:ml-1 justify-start h-12 w-12  sm:h-16 w-16 md:h-18 w-18"
+          ><img src="./assets/logo.png" alt="logo"
+        /></span>
+        <h1
+          class="text-2xl sm: text-3xl md:text-5xl  font-bold md: font-extrabold text-white text-center align-text-top mr-10 md:mr-96 pr-4 md:pr-20"
+        >
+          Credit Card Validation
+        </h1>
+      </nav>
+      <div class="flex justify-center items-center -mt-8 h-auto w-auto">
+        <img src="./assets/cc-removebg-preview.png" alt="ccimage" />
+      </div>
     </header>
+    <hr />
+    <section
+      class="grid grid-cols-2 md:gap-12 sm: gap-2 inset-y-2/4 py-40 md:pl-20 sm: pl-4 md:pr-20 sm:pl-4 justify-center"
+    >
+      <div class="rounded-xl h-full w-full bg-transparent p-0 top-0 -mt-0">
+        <span class="h-full w-full object-contain p-0 -mt-8 top-0"
+          ><img
+            src="./assets/credit-card-front-and-back-side-vector-26080917-removebg-preview.png"
+            alt="image"
+            width="800"
+            height="1000"
+            class="top-0"
+        /></span>
+      </div>
 
-    <section class=" grid grid-cols-2 gap-12 inset-y-2/4 py-40 pl-20 pr-20 justify-center">
-        
-        <div class="rounded-xl">
-            <img src="./assets/ifeanyi.jpeg" alt="image">
+      <div class="bg- h-6/12 w-full rounded-xl mt-4 top-2 pt-24">
+        <div
+          class="md:bg-indigo-800 sm: bg-purple-800 h-32 w-full rounded-t-2xl -mb-16 flex justify-between"
+        >
+          <h1 class="text-center md:text-2xl sm: text-base font-bold text-white sm:ml-2 md:ml-40 mt-2">
+            Credit Card Validation
+          </h1>
+          <span class="h-16 w-24 ml-4"
+            ><img src="./assets/cc-removebg-preview.png" alt="ccimage"
+          /></span>
         </div>
-
-        <div class="bg-white h-6/12 w-full rounded-xl">
-            <div class="bg-gray-300 h-1/4 w-full rounded-t-2xl">
-                <h1 class="text-center text-2xl">Credit Card Validation</h1>
+        <div class="md:bg-indigo-200 sm: bg-purple-200 h- w-full rounded-b-2xl">
+          <form action="" method="post" class="top-4">
+            <div class="flex flex-col font-bold h-16 justify-between top-4">
+              <label for="cardNumber" class="mt-1 text-xl ">Card Number</label>
+              <input
+                type="text"
+                name="cardNumber"
+                id="cardNumber"
+                class="border-4 border-gray-300 rounded-md h-12"
+                placeholder="**** **** **** ****"
+                required
+              />
             </div>
-            <div class="bg-gray-300 h-3/4 w-full rounded-b-2xl">
-                <form action="" method="post">
-                    <div class="flex flex-col">
-                        <label for="cardNumber">Card Number</label>
-                        <input type="text" name="cardNumber" id="cardNumber" class="border-2 border-gray-300 rounded-md">
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="cardHolder">Card Holder</label>
-                        <input type="text" name="cardHolder" id="cardHolder" class="border-2 border-gray-300 rounded-md">
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="expirationDate">Expiration Date</label>
-                        <input type="text" name="expirationDate" id="expirationDate" class="border-2 border-gray-300 rounded-md">
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="securityCode">Security Code</label>
-                        <input type="text" name="securityCode" id="securityCode" class="border-2 border-gray-300 rounded-md">
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="amount">Amount</label>
-                        <input type="text" name="amount" id="amount" class="border-2 border-gray-300 rounded-md">
-                    </div>
-                    <div class="flex flex-col">
-                        <input type="button" class=" btn btn-primary bg-blue-500 rounded-md" value="check" onclick="checkCC()" id="btn">
-                    </div>
-                </form>
+            <div class="flex flex-col font-bold h-16 justify-between">
+              <label for="cardHolder" class="mt-1 text-xl">Card Holder</label>
+              <input
+                type="text"
+                name="cardHolder"
+                id="cardHolder"
+                class="border-2 border-gray-300 rounded-md h-12"
+                placeholder="Your Name"
+              />
             </div>
+            <div class="flex flex-col font-bold h-16 justify-between">
+              <label for="expirationDate" class="mt-1 text-xl"
+                >Expiration Date</label
+              >
+              <input
+                type="month"
+                name="expirationDate"
+                id="expirationDate"
+                class="border-2 border-gray-300 rounded-md h-12"
+                placeholder="MM/YY"
+              />
+            </div>
+            <div class="flex flex-col font-bold h-16 justify-between">
+              <label for="securityCode" class="mt-1 text-xl">CVV</label>
+              <input
+                type="password"
+                name="securityCode"
+                id="securityCode"
+                class="border-2 border-gray-300 rounded-md h-12"
+                placeholder="###"
+              />
+            </div>
+            <div class="flex flex-col font-bold h-16 justify-between">
+              <label for="amount" class="mt-1 text-xl">Amount</label>
+              <input
+                type="text"
+                name="amount"
+                id="amount"
+                class="border-2 border-gray-300 rounded-md h-12"
+              />
+            </div>
+            <div class="flex flex-col font-bold h-14 justify-between">
+              <input
+                type="button"
+                class="btn btn-primary bg-indigo-800 rounded-md h-12 text-white mt-1"
+                value="Submit"
+                onclick="checkCC()"
+                id="btn"
+              />
+            </div>
+          </form>
         </div>
-
-        
+      </div>
     </section>
 
-    <div class="w-full text-white">
-        <label for="ccValidator" class="">Is it valid?</label>
-        <textarea disabled="true" class="w-full" style= "font-size: 25px" id="ccValidator" cols="1" rows="3"></textarea>
+    <div class="w-full text-white bg-gray-900 text-center items-center text-xl font-bold">
+      <label for="ccValidator" class="">Is it valid?</label>
+      <textarea
+        disabled="true"
+        class="w-full"
+        style="font-size: 25px"
+        id="ccValidator"
+        cols="1"
+        rows="3"
+      ></textarea>
     </div>
 
-    <script type="text/javascript" src="./cc_validation.js"></script>
-</body>
+    <script type="text/javascript" src="./ccValidation.js"></script>
+  </body>
 </html>
